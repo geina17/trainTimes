@@ -1,11 +1,3 @@
-/* global firebase moment */
-// Steps to complete:
-// 1. Initialize Firebase
-// 2. Create button for adding new trains - then update the html + update the database
-// 3. Create a way to retrieve trains from the train database.
-// 4. Create a way to calculate the months worked. Using difference between start and current time.
-//    Then use moment.js formatting to set difference in months.
-// 5. Calculate Total billed
 // 1. Initialize Firebase
 var config = {
     apiKey: "AIzaSyDNuhrFaKWHtYk6fHB8AONCEnh_IRgJH6I",
@@ -28,7 +20,7 @@ $("#adddTrnBtn").on("click", function(event) {
     var tock = $("#rateInput").val().trim();
     // Creates local "temporary" object for holding train data
     var tracks = {
-        name:train,
+        name: train,
         role: destination,
         start: tick,
         rate: tock,
@@ -68,12 +60,35 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey) {
     // To calculate the months worked
     var empMonths = moment().diff(moment.unix(startInput, "X"), "months");
     console.log(empMonths);
-    
-    
 });
-// Example Time Math
-// -----------------------------------------------------------------------------
-// Assume train start date of January 1, 2015
-// Assume current date is March 1, 2016
-// We know that this is 15 months.
-// Now we will create code in moment.js to confirm that any attempt we use mets this test case
+//need to put in a clock
+var randomDate = "02/23/1999";
+var randomFormat = "MM/DD/YYYY";
+var convertedDate = moment(randomDate, randomFormat);
+
+// Using scripts from moment.js write code below to complete each of the following.
+// Console.log to confirm the code changes we made worked.
+console.log(moment(convertedData).format("MM/DD/YY"));
+console.log(moment(convertedData).format("MMM Do,YYYY hh:mm:ss"));
+console.log(moment(convertedData).format("X"));
+console.log("---------------------------------------");
+// 1 ...to convert the randomDate into three other date formats
+
+// 2 ...to determine the time in years, months, days between today and the randomDate
+console.log(moment(convertedData).toNow());
+console.log(moment(convertedData).diff(moment(), "years"));
+console.log(moment(convertedData).diff(moment(), "months"));
+console.log(moment(convertedData).diff(moment(), "days"));
+console.log("------------------------------------");
+
+// 3 ...to determine the number of days between the randomDate and 02/14/2001
+var newDate = moment("02/14/2001", randomFormat);
+console.log(moment(convertedData).diff(moment(newDate), "days"));
+
+// 4 ...to convert the randomDate to unix time (be sure to look up what unix time even is!!!)
+console.log(moment(convertedData).format("X"));
+console.log("------------------------------------");
+
+// 5 ...to determine what day of the week and what week of the year this randomDate falls on.
+console.log(moment(convertedData).format("DDD"));
+console.log(moment(convertedData).format("dddd"));

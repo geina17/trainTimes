@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
@@ -18,25 +19,24 @@
       <!-- Jumbotron -->
       <div class="jumbotron" style="background-color: blue; color: white">
         <h1 class="text-center">Train Schedule</h1>
-        <h3 class="text-center">"Sometimes you’re the train, sometimes you’re the track." -Luke Bryan</h3>
+        <h3 class="text-center">Sometimes you're the track sometimes you're the train</h3>
       </div>
       <div class="row">
         <div class="col-lg-12">
         <!-- Current Employees-->
           <div class="panel panel-primary">
             <div class="panel-heading">
-              <h3 class="panel-title"><strong>Current Trains</strong></h3>
+              <h3 class="panel-title"><strong>Current Train</strong></h3>
             </div>
             <div class="panel-body">
               <table class="table table-hover" id='employee-table'>
                 <thead>
                   <tr>
-                  <th>Train Name</th>
+                    <th>Train Name</th>
                     <th>Destination</th>
-                    <th>Start Date</th>
-                    <th>Months Worked</th>
-                    <th>Monthly Rate ($)</th>
-                    <th>Total Billed ($)</th>
+                    <th>Frequency (min)</th>
+                    <th>Next Arrival</th>
+                    <th>Minutes Away</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -53,19 +53,19 @@
               <!-- Entry Form -->
               <form>
                 <div class="form-group">
-                  <label for="employee-name-input">Train</label>
+                  <label for="employee-name-input">Train Name</label>
                   <input class="form-control" id="employee-name-input" type="text">
                 </div>
                 <div class="form-group">
-                  <label for="role-input">Desination</label>
+                  <label for="role-input">Destination</label>
                   <input class="form-control" id="role-input" type="text">
                 </div>
                 <div class="form-group">
-                  <label for="start-input">Time (24hrs)</label>
+                  <label for="start-input">Frequency (min)</label>
                   <input class="form-control" id="start-input" type="text">
                 </div>
                 <div class="form-group">
-                  <label for="rate-input">Frequency</label>
+                  <label for="rate-input">Minutes Away</label>
                   <input class="form-control" id="rate-input" type="text">
                 </div>
                 <button class="btn btn-primary" id="add-employee-btn" type="submit">Submit</button>
@@ -76,6 +76,6 @@
       </div>
     </div>
     <!-- JavaScript -->
-    <script src="fk.js"></script>
+    <script src="loca.js"></script>
   </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
-    <title>Employee Tracker</title>
+    <title>Train Schedule</title>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -14,7 +14,7 @@
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
   </head>
   <body>
-    <!-- Employee Tracker -->
+    <!-- train Tracker -->
     <div class="container">
       <!-- Jumbotron -->
       <div class="jumbotron" style="background-color: blue; color: white">
@@ -23,13 +23,13 @@
       </div>
       <div class="row">
         <div class="col-lg-12">
-        <!-- Current Employees-->
+        <!-- Current trains-->
           <div class="panel panel-primary">
             <div class="panel-heading">
               <h3 class="panel-title"><strong>Current Train</strong></h3>
             </div>
             <div class="panel-body">
-              <table class="table table-hover" id='employee-table'>
+              <table class="table table-hover" id='train-table'>
                 <thead>
                   <tr>
                     <th>Train Name</th>
@@ -44,7 +44,7 @@
               </table>
             </div>
           </div>
-          <!-- Add Employee  -->
+          <!-- Add train  -->
           <div class="panel panel-primary">
             <div class="panel-heading">
               <h3 class="panel-title"><strong>Add Train</strong></h3>
@@ -53,22 +53,22 @@
               <!-- Entry Form -->
               <form>
                 <div class="form-group">
-                  <label for="employee-name-input">Train Name</label>
-                  <input class="form-control" id="employee-name-input" type="text">
+                  <label for="trnNameInput">Train Name</label>
+                  <input class="form-control" id="trnNameInput" type="text">
                 </div>
                 <div class="form-group">
-                  <label for="role-input">Destination</label>
-                  <input class="form-control" id="role-input" type="text">
+                  <label for="roleInput">Destination</label>
+                  <input class="form-control" id="roleInput" type="text">
                 </div>
                 <div class="form-group">
-                  <label for="start-input">Frequency (min)</label>
-                  <input class="form-control" id="start-input" type="text">
+                  <label for="goInput">Minutes Away</label>
+                  <input class="form-control" id="goInput" type="text">
                 </div>
                 <div class="form-group">
-                  <label for="rate-input">Minutes Away</label>
-                  <input class="form-control" id="rate-input" type="text">
+                  <label for="rateInput">Frequency (min)</label>
+                  <input class="form-control" id="rateInput" type="text">
                 </div>
-                <button class="btn btn-primary" id="add-employee-btn" type="submit">Submit</button>
+                <button class="btn btn-primary" id="addTrnBtn" type="submit">Submit</button>
               </form>
             </div>
           </div>
